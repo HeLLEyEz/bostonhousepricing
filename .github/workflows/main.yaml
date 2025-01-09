@@ -24,35 +24,13 @@ jobs:
           # Below you must provide variables for your Render app.
           deploy-hook: ${{ secrets.RENDER_DEPLOY_HOOK }}
 
-          # The email address associated with your Render account.
-          # If you don't want to use repository secrets (which is recommended) you can do:
-          # email: my.email@example.com
-          email: ${{ secrets.RENDER_EMAIL }}
-          
+          image-url: my-dockerhub-user/my-app:my-tag
+
           # Render API key associated with provided user's email.
           # Api Key is available under your Render account settings.
-          render_api_key: ${{ secrets.RENDER_API_KEY }}
-          
-          # Name of the render application to which the build is to be sent.
-          render_app_name: ${{ secrets.RENDER_APP_NAME }}
+          render-api-key: ${{ secrets.RENDER_API_KEY }}
 
-          # (Optional, default: "./")
-          # Dockerfile directory.
-          # For example, if you have a Dockerfile in the root of your project, leave it as follows:
-          dockerfile_directory: ./
-
-          # (Optional, default: "Dockerfile")
-          # Dockerfile name.
-          dockerfile_name: Dockerfile
-
-          # (Optional, default: "")
-          # Additional options of docker build command.
-          docker_options: "--no-cache"
-
-          # (Optional, default: "web")
-          # Select the process type for which you want the docker container to be uploaded.
-          # By default, this argument is set to "web".
-          process_type: web
+          wait-for-deployment: true
           
    
           
