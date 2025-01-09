@@ -24,7 +24,7 @@ jobs:
           # Below you must provide variables for your Render app.
           deploy-hook: ${{ secrets.RENDER_DEPLOY_HOOK }}
 
-          image-url: akshat2902/boston-house-pricing:v1.0
+          image-url: docker.io/akshat2902/boston-house-pricing:latest
 
           # Render API key associated with provided user's email.
           # Api Key is available under your Render account settings.
