@@ -52,6 +52,8 @@ jobs:
           # Select the process type for which you want the docker container to be uploaded.
           # By default, this argument is set to "web".
           process_type: web
+
+          wait-for-deployment: true
           
    
           
